@@ -1,0 +1,566 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+:root {
+  --Gray: #6c6c6c;
+  --darkGray: #e6e6e6;
+  --lightGray: #efefef;
+  --darkBrown: #212020;
+  --blue: #0740ac;
+  --white: white;
+  --piink: #e4c1d7;
+  --lightpink: #ffdbf2;
+  --darkpink: rgb(227, 187, 210);
+  --pink: #e87dc1;
+  --darkgreen: #3e9c35;
+  --red: #821e12;
+  --darkred: #492e40;
+  --lightblack: rgb(29, 29, 29);
+  --black: rgb(26, 26, 26);
+  --darkblack: rgb(18, 15, 19);
+  --gold: #ffd700;
+  --filtergray: invert(44%) sepia(7%) saturate(40%) hue-rotate(316deg) brightness(92%) contrast(88%);
+  --filterblue: invert(13%) sepia(77%) saturate(5374%) hue-rotate(218deg) brightness(85%) contrast(95%);
+}
+
+.gray {
+  --bg: var(--lightGray);
+  --circle: var(--white);
+  --circle1: var(--lightGray);
+  --circle2: var(--darkGray);
+  --text-h1: var(--darkBrown);
+  --text-p: var(--darkBrown);
+  --text-a: var(--blue);
+  --logo: var(--Gray);
+  --number: var(--darkGray);
+}
+
+.black {
+  --bg: var(--lightblack);
+  --circle: var(--white);
+  --circle1: var(--lightblack);
+  --circle2: var(--black);
+  --text-h1: var(--lightGray);
+  --text-p: var(--lightGray);
+  --text-a: var(--gold);
+  --logo: var(--gold);
+  --number: var(--black);
+}
+
+.pink {
+  --bg: var(--lightpink);
+  --circle: var(--white);
+  --circle1: var(--lightpink);
+  --circle2: var(--darkpink);
+  --text-h1: var(--darkred);
+  --text-p: var(--darkred);
+  --text-a: var(--red);
+  --logo: var(--pink);
+  --number: var(--darkpink);
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Poppins;
+  font-weight: 300;
+  z-index: 5;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*=============================================
+=            OVERLAY            =
+=============================================*/
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  z-index: 99;
+  overflow: hidden;
+}
+
+.first {
+  background: var(--darkGray);
+  overflow: hidden;
+  width: 33.3%;
+}
+
+.second {
+  background: var(--darkGray);
+  left: 33.3%;
+  width: 33.3%;
+  overflow: hidden;
+}
+
+.third {
+  background: var(--darkGray);
+  overflow: hidden;
+  left: 66.6%;
+  width: 33.3%;
+}
+
+.hidetext {
+  position: absolute;
+}
+
+/*=============================================
+=            HERO            =
+=============================================*/
+.hero {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  padding: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--bg);
+  -webkit-transition: background 500ms ease-in-out, color 1000ms ease-in-out;
+  transition: background 500ms ease-in-out, color 1000ms ease-in-out;
+  /**
+     *
+     * CIRCLES
+     *
+     */
+  /**
+     *
+     * NAV
+     *
+     */
+  /**
+     *
+     * TEXT
+     *
+     */
+  /*=============================================
+    =            PICTURES            =
+    =============================================*/
+}
+
+.hero .circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--circle);
+  -webkit-clip-path: ellipse(23.5% 70% at right 50%);
+          clip-path: ellipse(23.5% 70% at right 50%);
+  z-index: 1;
+  -webkit-transition: background 500ms ease-in-out;
+  transition: background 500ms ease-in-out;
+}
+
+.hero .circle1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--circle1);
+  -webkit-clip-path: ellipse(29% 70% at right 50%);
+          clip-path: ellipse(29% 70% at right 50%);
+  z-index: 0;
+  -webkit-transition: background 500ms ease-in-out;
+  transition: background 500ms ease-in-out;
+}
+
+.hero .circle2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--circle2);
+  -webkit-clip-path: ellipse(34% 70% at right 50%);
+          clip-path: ellipse(34% 70% at right 50%);
+  z-index: -1;
+  -webkit-transition: background 500ms ease-in-out;
+  transition: background 500ms ease-in-out;
+}
+
+.hero .number {
+  position: absolute;
+  font-size: 30em;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+  color: var(--number);
+  -webkit-transition: color 1000ms ease-in-out;
+  transition: color 1000ms ease-in-out;
+  top: 650px;
+  left: 400px;
+  overflow: visible;
+  z-index: -1;
+}
+
+.hero header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 102%;
+  padding: 40px 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 15px;
+}
+
+.hero header .logo {
+  color: var(--logo);
+  font-size: 3em;
+  font-family: georgia;
+  -webkit-transition: color 1000ms ease-in-out;
+  transition: color 1000ms ease-in-out;
+}
+
+.hero header .menu {
+  display: block;
+  margin-right: auto;
+  margin-top: 19px;
+}
+
+.hero header .menu .logoimg {
+  width: 30px;
+  -webkit-filter: var(--filtergray);
+          filter: var(--filtergray);
+}
+
+.hero header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hero header ul li {
+  padding: 20px 20px;
+}
+
+.hero header ul li .bruh {
+  width: 30px;
+  -webkit-filter: var(--filtergray);
+          filter: var(--filtergray);
+}
+
+.hero .content {
+  position: absolute;
+  width: 450px;
+  z-index: 4;
+  top: 220px;
+}
+
+.hero .content h1 {
+  font-size: 4em;
+  color: var(--text-h1);
+  line-height: 78px;
+  width: 100%;
+  overflow: hidden;
+  font-weight: 500;
+  position: relative;
+  height: 150px;
+  -webkit-transition: color 1000ms ease-in-out;
+  transition: color 1000ms ease-in-out;
+}
+
+.hero .content p {
+  padding-bottom: 80px;
+  color: var(--text-p);
+  line-height: 28px;
+  letter-spacing: 0;
+  max-width: 450px;
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: color 1000ms ease-in-out;
+  transition: color 1000ms ease-in-out;
+}
+
+.hero .content a {
+  display: block;
+  width: 190px;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: var(--text-a);
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 40px;
+  -webkit-transition: color 1000ms ease-in-out;
+  transition: color 1000ms ease-in-out;
+}
+
+.hero .content .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hero .content .textimg {
+  margin-right: 20px;
+  margin-top: 4px;
+  width: 30px;
+  -webkit-filter: var(--filterblue);
+          filter: var(--filterblue);
+}
+
+.hero .progcircles {
+  position: absolute;
+  bottom: 50px;
+  left: 150px;
+  width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero .progcircles img {
+  width: 15px;
+}
+
+.hero .man {
+  position: absolute;
+  width: 750px;
+  bottom: 0px;
+  left: 35%;
+  z-index: 3;
+  overflow-y: hidden;
+}
+
+.hero .man2 {
+  position: absolute;
+  width: 1130px;
+  bottom: 0%;
+  left: -80%;
+  z-index: 3;
+  overflow-y: hidden;
+}
+
+.hero .woman {
+  position: absolute;
+  width: 600px;
+  bottom: 0%;
+  left: -80%;
+  z-index: 3;
+  overflow: hidden;
+}
+
+.hero .items {
+  position: absolute;
+  right: 100px;
+  bottom: 38px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+}
+
+.hero .items h2 {
+  font-size: 1.7em;
+  font-weight: 600;
+}
+
+.hero .items h4 {
+  font-size: 1.2em;
+  color: #6c6c6c;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.hero .items i {
+  display: inline-block;
+  font-size: 2.5em;
+  margin-top: 10px;
+  text-align: end;
+  color: var(--blue);
+}
+
+.hero .items .strike {
+  text-decoration: line-through;
+}
+
+.categories {
+  height: 100px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--lightGray);
+}
+
+.categories h3 {
+  display: inline-block;
+  padding: 10px 40px;
+  background-color: var(--white);
+  border-radius: 20px;
+}
+
+.categories ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100px;
+}
+
+.categories ul li {
+  padding: 0px 40px;
+}
+
+.categories ul li:last-child {
+  padding-right: 350px;
+}
+
+.categories ul li a {
+  color: #0740ac;
+}
+
+.womenWardrobe {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  padding: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--bg);
+  -webkit-transition: background 500ms ease-in-out, color 1000ms ease-in-out;
+  transition: background 500ms ease-in-out, color 1000ms ease-in-out;
+  overflow: hidden;
+}
+
+.womenWardrobe .textboxxx {
+  position: absolute;
+  width: 450px;
+  z-index: 4;
+  top: 240px;
+  left: 220px;
+}
+
+.womenWardrobe .textboxxx .fit {
+  color: #6c6c6c;
+  position: absolute;
+  top: -38px;
+}
+
+.womenWardrobe .textboxxx .h8 {
+  font-size: 4em;
+  color: var(--text-h1);
+  line-height: 78px;
+  width: 100%;
+  overflow: hidden;
+  font-weight: 500;
+  position: relative;
+  height: 150px;
+  -webkit-transition: color 1000ms ease-in-out;
+  transition: color 1000ms ease-in-out;
+}
+
+.womenWardrobe .textboxxx p {
+  padding-bottom: 20px;
+  padding-top: 20px;
+  color: var(--text-p);
+  line-height: 28px;
+  letter-spacing: 0;
+  max-width: 450px;
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: color 1000ms ease-in-out;
+  transition: color 1000ms ease-in-out;
+}
+
+.womenWardrobe .textboxxx a {
+  display: block;
+  width: 190px;
+  font-size: 1.5em;
+  font-weight: 300;
+  color: var(--text-a);
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 40px;
+  -webkit-transition: color 1000ms ease-in-out;
+  transition: color 1000ms ease-in-out;
+}
+
+.womenWardrobe .womenimg {
+  position: absolute;
+  width: 600px;
+  bottom: 0;
+  right: 110px;
+  z-index: 3;
+  overflow: hidden;
+}
+
+.womenWardrobe .womenimg:hover .circlewomen {
+  -webkit-transform: scale(110%);
+          transform: scale(110%);
+}
+
+.womenWardrobe .circlewomen {
+  position: absolute;
+  top: 180px;
+  right: -100px;
+  width: 70%;
+  height: 70%;
+  background: var(--lightGray);
+  -webkit-clip-path: circle(32.57% at 544px 276px);
+          clip-path: circle(32.57% at 544px 276px);
+  z-index: 1;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.womenWardrobe .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.womenWardrobe .textimg {
+  margin-right: 20px;
+  margin-top: -28px;
+  width: 30px;
+  -webkit-filter: var(--filterblue);
+          filter: var(--filterblue);
+}
+/*# sourceMappingURL=style.css.map */
